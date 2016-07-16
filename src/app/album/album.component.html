@@ -1,0 +1,14 @@
+<figure>
+  <img src="{{ review.albumArt }}" />
+</figure>
+<div class="review__information">
+  <h2>{{ review.artistName }}</h2>
+  <h3>{{ review.albumName }}</h3>
+  <div class="review__score">
+    <p>{{ review.albumScore }}</p>
+    <div class="review__change">
+      <a href (click)="scoreUp()">+</a>
+      <a href (click)="scoreDown()">-</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<main class="app__wrapper">
+  <article class="app__inner">
+
+    <app-album *ngFor="let review of reviewsSorted()"
+            [review]="review"></app-album>
+    <form>
+      <div>
+        <label for="artistName">Artist:</label>
+        <input name="artistName" #artistName/>
+      </div>
+      <div>
+        <label for="albumName">Album:</label>
+        <input name="albumName" #albumName/>
+      </div>
+      <div>
+        <label for="albumScore">Score:</label>
+        <input name="albumScore" type="number" #albumScore/>
+      </div>
+      <div>
+        <label for="albumArt">Image:</label>
+        <input name="albumArt" #albumArt/>
+      </div>
+      <button (click)="addReview(artistName, albumName, albumScore, albumArt)">Submit Review
+      </button>
+    </form>
+  </article>
+</main>
